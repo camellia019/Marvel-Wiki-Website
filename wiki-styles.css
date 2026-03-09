@@ -1,0 +1,447 @@
+:root{
+  --black:      #0a0a0a;
+  --dark:       #141414;
+  --card-bg:    #1a1a1a;
+  --border:     #2e2e2e;
+  --red:        #e23636;
+  --white:      #ffffff;
+  --gray:       #aaaaaa;
+  --light-gray: #cccccc;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CUSTOM SCROLLBAR */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--black);
+  border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--red);
+  border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff4444;
+}
+
+body{
+  background-color: var(--black);
+  color: var(--light-gray);
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/*--MENU BAR----*/
+.menu-bar{
+  background-color: #141414;
+  color: white;
+  padding: 10px 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--red);
+  transition: border-bottom 0.3s, box-shadow 0.3s;
+  
+}
+
+.menu-bar:hover{
+  border-bottom: 1px solid var(--red);
+  box-shadow: 0 4px 12px var(--red);
+}
+
+.menu-inner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 20px;
+}
+
+.menu-left{
+  font-family: 'Oswald', sans-serif;
+  color: var(--gray);
+}
+
+.menu-left span{
+   transition: color 0.3s, opacity 0.5s;
+   cursor: pointer;
+}
+
+.menu-left span:hover{
+  color: var(--white);
+  opacity: 1;
+}
+
+.marvel-logo{
+  display: inline-block;
+  background-color: var(--red);
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 4px 12px;
+  letter-spacing: 2px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/*-- WEBSITE HEADER ----*/
+.website-header{
+  background-color: var(--black);
+  border-bottom: 1px solid var(--red);
+  text-align: center;
+  padding: 30px 20px;
+  
+}
+
+.website-header h1{
+    letter-spacing: 3px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.website-header p{
+  letter-spacing: 3px;
+  color: gray;
+  margin: 0;
+}
+
+
+
+/*--NAVIGATION SITE----*/
+.navigation-site{
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 10px;
+  
+}
+a{
+  color: var(--red);
+  text-decoration: none;
+}
+
+a:hover{
+  color: var(--white);
+  text-decoration: underline;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 1px;
+}
+
+.navigation-site{
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid var(--red);
+  transition: box-shadow 0.3s;
+}
+
+.navigation-site:hover{
+  box-shadow: 0 4px 12px var(--red);
+}
+
+.navigation-site a{
+  padding: 6px 20px;
+  transition: color 0.5s, border-color 0.5s, opacity 0.3s;
+}
+
+.navigation-site a.active{
+  color: var(--white);
+  border-bottom: 3px solid var(--red);
+}
+
+.navigation-site a:hover{
+  color: var(--white);
+  border-bottom: 3px solid var(--red);
+  text-decoration: none;
+}
+
+.navigation-site:hover a:not(:hover) {
+  opacity: 0.3;
+}
+
+/*--PAGE WRAPPER----*/
+.page-wrap{
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 28px 20px;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* ── MAIN CONTENT ── */
+.main-content { 
+  flex: 1;
+}
+
+
+
+/* ── INTRODUCTION CONTENT── */
+.content-section {
+  margin-bottom: 36px; 
+}
+
+.content-section h2{
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5rem;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+}
+
+
+hr{
+  border: none;
+  border-top: 2px solid var(--red);
+  opacity: 1;
+}
+
+.content-section hr{
+  border-top: 2px solid var(--red);
+  margin-bottom: 18px;
+}
+
+/*---ALL ABOUT---*/
+.all-about-for-grid{
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.all-about-for-text{
+  flex: 1;
+}
+
+.all-about-for-text p{
+  font-size: 18px;
+}
+
+/*CHARACTER CARDS*/
+.character-grid {
+  display: flex;
+  gap: 45px;
+  flex-wrap: nowrap;
+}
+
+.character-card {
+  text-align: center;
+  text-decoration: none;
+  width: 180px;
+  gap: 20px;
+}
+
+.character-card img {
+  width: 250px;
+  height: 300px;
+  object-fit: cover;
+  border: 2px solid var(--border);
+  transition: border-color 0.2s;
+}
+
+.character-card:hover img {
+  border-color: var(--red);
+}
+
+.character-card p {
+  color: var(--red);
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.85rem;
+  margin-top: 6px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/*---MARVEL INFO BOX---*/
+.right-sidebar{
+  margin-left: 50px;
+}
+
+.marvel-info-box{
+  width: 260px;
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--red);
+  background-color: var(--dark);
+  font-size: 0.80rem;
+  flex-shrink: 0;
+}
+
+.info-box-title{
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 10px;
+  background-color: #111;
+  border: 1px solid var(--border);
+  letter-spacing: 1px;
+}
+
+.marvel-info-box td, .marvel-info-box th {
+  padding: 12px 12px;
+  line-height: 1.0;
+}
+
+/*---FAMOUS QUOTE---*/
+.famous-quote-box{
+  width: 260px;
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--red);
+  background-color: var(--dark);
+  font-size: 0.80rem;
+  flex-shrink: 0;
+  padding: 12px 12px;
+  
+}
+.famous-quote-box h3{
+  text-align: center;
+}
+.famous-quote-box blockquote{
+  padding: 12px 12px;
+  text-align: center;
+  font-size: 1.0rem;
+}
+.famous-quote-box cite{
+  color: var(--red);
+  display: block;
+  text-align: right;
+  padding: 12px 12px;
+}
+
+
+/* FUN FACT*/
+.fun-fact-box{
+  width: 260px;
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--red);
+  background-color: var(--dark);
+  font-size: 0.80rem;
+  flex-shrink: 0;
+  padding: 12px 12px;
+}
+
+.fun-fact-box h3{
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+}
+
+.fun-fact-box p{
+  padding: 12px 12px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.0rem;
+  line-height: 1.5;
+}
+
+.footer-section{
+  border-top: 1px solid var(--red);
+  transition: border-top 0.3s, box-shadow 0.3s;
+}
+
+.footer-section:hover{
+  border-top: 1px solid var(--red);
+  box-shadow: 0 4px 12px var(--red);
+}
+
+.footer-info{
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  padding: 12px 12px;
+  color: var(--light-gray);
+  opacity: 0.5;
+}
+
+/* CHARACTER BANNER */
+.character-banner {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+.banner-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.95));
+}
+
+.banner-rank {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.75rem;
+  color: var(--red);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin: 0 0 4px 0;
+}
+
+.banner-name {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.5rem;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin: 0 0 4px 0;
+}
+
+.banner-alter {
+  font-size: 0.85rem;
+  color: var(--gray);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+
+/* EPISODES TABLE */
+.episodes-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.episodes-table th {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--red);
+  padding: 10px 12px;
+  border-bottom: 2px solid var(--red);
+  text-align: left;
+}
+
+.episodes-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  color: var(--gray);
+}
+
+.episodes-table tr:hover td {
+  background-color: var(--card-bg);
+  color: var(--white);
+}
+
+
+     
